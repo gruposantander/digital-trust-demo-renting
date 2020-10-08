@@ -1,0 +1,39 @@
+<header>
+  <img class="logo" src="assets/renting_logo.svg" alt="logo" (click)="goHome()">
+  <div class="border"></div>
+  <h1 class="qj" (click)="goHome()">Rent with Trust</h1>
+
+  <ul>
+    <li>
+      <h3>Apply</h3>
+    </li>
+    <li>
+      <h3>Properties</h3>
+    </li>
+    <li>
+      <h3 (click)="clickNotifications()">Notifications</h3>
+      <img class="notification" src="assets/notification.png" alt="" (click)="clickNotifications()"
+        *ngIf="!sdkService.verified">
+      <app-notifications
+        @notifications
+        *ngIf="viewNotifications"></app-notifications>
+    </li>
+    <li>
+      <h3 (click)="clickProfile()">My profile</h3>
+      <img class="profile" src="assets/profile.png" alt="" (click)="clickProfile()">
+    </li>
+  </ul>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <ul>
+    <li>
+      <h5><span>Contact us</span></h5>
+      <h5><span>Terms and conditions</span></h5>
+      <h5><span>Work for us</span></h5>
+      <h5><span>Developers</span></h5>
+    </li>
+  </ul>
+</footer>

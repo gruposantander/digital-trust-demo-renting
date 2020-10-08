@@ -1,0 +1,9 @@
+<div style="align-items: center;">
+<p>Click the link to start verification</p>
+<button (click)="verifyUser()">
+    <img src="assets/sflame.svg" alt="flame">
+    <h2>Verify</h2>
+</button>
+<p>Or scan this QR code with your Santander ID App</p>
+<qrcode [qrdata]="request_uri" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+</div>

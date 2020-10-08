@@ -1,0 +1,39 @@
+html, body {
+  font-family: 'SantanderText', Helvetica, sans-serif;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  background-color: #ce8922;
+  height: 100vh;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+    font-family: 'SantanderText';
+    src:  url('src/assets/fonts/SantanderText-Regular.otf') format("opentype"),
+          url('src/assets/fonts/SantanderText-Regular.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'SantanderText';
+    src:  url('src/assets/fonts/SantanderText-Light.otf') format("opentype"),
+          url('src/assets/fonts/SantanderText-Light.woff') format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'SantanderText';
+    src:  url('src/assets/fonts/SantanderText-Italic.otf') format("opentype"),
+          url('src/assets/fonts/SantanderText-Italic.woff') format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }

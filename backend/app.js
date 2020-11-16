@@ -22,8 +22,8 @@ let resetScheduler = schedule.scheduleJob(cronSchedule, function(){
 
 let defaultUserDetails = {
     "title": "Mrs",
-    "given_name": "Yost",
-    "family_name": "Hilton",
+    "given_name": "Anita",
+    "family_name": "Yost",
     "country_of_birth": "GB",
     "address": {
         "street_address": "19 Kacey Forest",
@@ -35,8 +35,8 @@ let defaultUserDetails = {
 let userDetails = 
     {
         "title": "Mrs",
-        "given_name": "Yost",
-        "family_name": "Hilton",
+        "given_name": "Anita",
+        "family_name": "Yost",
         "country_of_birth": "GB",
         "address": {
             "street_address": "19 Kacey Forest",
@@ -92,17 +92,17 @@ app.get('/initiate-authorize', async (req, res) => {
         .withAssertion(Balance.currency().eq("GBP"))
         .withAssertion(Balance.amount().gt(30000.00))
         .withIAL(3)
-        .withPurpose('We want to check your income in the last year is greater than 30k')
+        .withPurpose('We want to check you had a high income in the last year')
     assertionClaims.age()
         .gte(18)
         .withIAL(2)
         .withPurpose('We want to check you are older than 18')
 
     assertionClaims.totalBalance()
-        .withAssertion(Balance.currency().eq("USD"))
-        .withAssertion(Balance.amount().gt(30000.00))
+        .withAssertion(Balance.currency().eq("GBP"))
+        .withAssertion(Balance.amount().gt(10000.00))
         .withIAL(3)
-        .withPurpose('We want to check your have more than 30k USD')
+        .withPurpose('We want to check you have money for the deposit')
 
     let verifyidclient;
     try {
